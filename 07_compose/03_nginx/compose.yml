@@ -1,0 +1,11 @@
+services:
+  web:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - "/etc/nginx/conf:/etc/nginx/conf:ro"
+    command: 
+      - "nginx-debug"
+      - "-g"
+      - "daemon off;"
